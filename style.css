@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #111;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.typing {
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 30px;
+  color: whitesmoke;
+  font-weight: 700;
+}
+.typing p {
+  margin: 0;
+}
+.typing p::before {
+  content: "~ ";
+}
+.typing p:nth-last-of-type(1)::after {
+  font-size: 35px;
+  content: "_";
+  animation: cursor 0.3s infinite alternate;
+}
+@keyframes cursor {
+  0%,
+  30% {
+    opacity: 0;
+  }
+  70%,
+  100% {
+    opacity: 1;
+  }
+}
